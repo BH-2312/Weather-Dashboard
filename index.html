@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" src="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!--Title across top of page-->
+        <div class="title">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                    <h1 class="display-4">Weather Dashboard</h1>
+                </div>
+            </div>
+        </div>
+        <!--Search area on left hand side of page-->
+        <div class="row">
+            <div class="col-3">
+                <div class="citySearch">
+                    <div class="form-group">
+                        <label for="search">Search For a City:</label>
+                        <input type="text" placeholder="Search a city" name="search" id="searchCity">
+                        <button type="submit" id=submitBtn><i class="fa fa-search"></i></button>
+                    </div>
+                    <!-- Previously searched cities go here-->
+                    <div class="prevSearches">
+                        <table class="table-striped" id="cityTable">
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!--Results field for city that has been searched showing weather info-->
+            <div class="col-9">
+                <div class="weatherResults">
+                    <div class="card" >
+                        <div class="card-body">
+                            <ul><span id="city">
+                                </span> <span id="country"></span>
+                            </ul>
+                            <ul>Temperature: <span id="temp">
+                                </span></ul>
+                            <ul>Humidity: <span id="humid">
+                                </span></ul>
+                            <ul>Wind Speed: <span id="wind">
+                                </span></ul>
+                            <ul>UV Index: <span id="uv">
+                                </span></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- forecast information div-->
+            <div class="forecast">
+                <h1>5 day forecast:</h1>
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+                                <div class="card-header" id="day1">Date</div>
+                                <div class="card-body">
+                                    <h5 class="card-text">Temp:</h5>
+                                    <h5 class="card-text">Humidity:</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+                                <div class="card-header" id="day2">Date</div>
+                                <div class="card-body">
+                                    <h5 class="card-text">Temp:</h5>
+                                    <h5 class="card-text">Humidity:</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+                                <div class="card-header" id="day3">Date</div>
+                                <div class="card-body">
+                                    <h5 class="card-text">Temp:</h5>
+                                    <h5 class="card-text">Humidity:</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+                                <div class="card-header" id="day4">Date</div>
+                                <div class="card-body">
+                                    <h5 class="card-text">Temp:</h5>
+                                    <h5 class="card-text">Humidity:</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+                                <div class="card-header" id="day5">Date</div>
+                                <div class="card-body">
+                                    <h5 class="card-text">Temp:</h5>
+                                    <h5 class="card-text">Humidity:</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- jQuery JS -->
+            <script src="https://code.jquery.com/jquery.js"></script>
+            <script
+                src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+            <!-- Code to the JavaScript File -->
+            <script src="script.js"></script>
+</body>
+
+</html>
