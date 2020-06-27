@@ -61,22 +61,18 @@ $("document").ready(function () {
                 $("#wind").text(response2.current.wind_speed + "km/h");
                 var uv = response2.current.uvi;
                 $("#uv").text(uv);
+                console.log(typeof(uv));
+                console.log(uv <= 3)
 
                 // uv index colours
-                if (uv <= 2) {
-                    $("#uv").addClass("green");
-                };
-                if ((uv >= 3) && (uv <= 5)) {
+                if (uv <= 3) {
+                    $("#uv").addClass("uv-green");
+                }
+                else if (uv <= 7) {
                     $("#uv").addClass("gold");
-                };
-                if ((uv >= 6) && (uv <= 7)) {
-                    $("#uv").addClass("orange");
-                };
-                if ((uv >= 8) && (uv <= 10)) {
+                }
+                else if (uv > 7) {
                     $("#uv").addClass("red");
-                };
-                if (uv > 10) {
-                    $("#uv").addClass("purple");
                 };
 
                 // for 5 day forecast

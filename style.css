@@ -1,36 +1,37 @@
 .citySearch{
     float: left;
 };
-.green {
-background-color: green;
+
+.uv-green {
+color: green !important;
 };
+
 .gold{
     background-color: gold;
 };
-.orange{
-background-color: orange;
-};
+
 .red{
 background-color: red;
 };
-.purple{
-    background-color: purple;   
-};
+
 .title{
    background-color: lightblue;
    text-align: center;
 };
+
 h1{
     text-align: center; 
 };
+
 .card-body{
     font-size: larger;
 };
+
 #today{
     font-size: small;
 };
 
-    /*instructions for when screen size <768px*/
+    /* instructions for when screen size <768px
     @media screen and (max-width: 768px) {
     
         .container-fluid {}
@@ -40,7 +41,7 @@ h1{
           font-size: 18px;
           line-height: 20px;
   
-        }
+        } */
   
   
    
