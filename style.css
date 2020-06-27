@@ -1,8 +1,48 @@
 .citySearch{
-
     float: left;
-}
-.weatherResults{
+};
+.green {
+background-color: green;
+};
+.gold{
+    background-color: gold;
+};
+.orange{
+background-color: orange;
+};
+.red{
+background-color: red;
+};
+.purple{
+    background-color: purple;   
+};
+.title{
+   background-color: lightblue;
+   text-align: center;
+};
+h1{
+    text-align: center; 
+};
+.card-body{
+    font-size: larger;
+};
+#today{
+    font-size: small;
+};
 
-    float: right;
-}
+    /*instructions for when screen size <768px*/
+    @media screen and (max-width: 768px) {
+    
+        .container-fluid {}
+    }
+          /* Box-model */
+          /*width: 100%;
+          font-size: 18px;
+          line-height: 20px;
+  
+        }
+  
+  
+   
+    
+

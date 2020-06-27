@@ -8,16 +8,16 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" type="text/css" src="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body>
-    <div class="container">
+    <div class="container-fluid">
         <!--Title across top of page-->
         <div class="title">
-            <div class="jumbotron jumbotron-fluid">
-                <div class="container">
+            <div class="jumbotron jumbotron-fluid" class = "bg-info text-white">
+                <div class="container-fluid" >
                     <h1 class="display-4">Weather Dashboard</h1>
                 </div>
             </div>
@@ -44,11 +44,15 @@
             <!--Results field for city that has been searched showing weather info-->
             <div class="col-9">
                 <div class="weatherResults">
-                    <div class="card" >
+                    <div class="card">
                         <div class="card-body">
-                            <ul><span id="city">
-                                </span> <span id="country"></span>
+                            <ul>
+                                <span id="city"> </span> 
+                                <span id="country"></span>
+                                <span> </span>
+                                <span id="today"></span>
                             </ul>
+                            <img id = "iconCurrent">
                             <ul>Temperature: <span id="temp">
                                 </span></ul>
                             <ul>Humidity: <span id="humid">
@@ -61,65 +65,77 @@
                     </div>
                 </div>
             </div>
-            <!-- forecast information div-->
-            <div class="forecast">
-                <h1>5 day forecast:</h1>
-                <div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
-                                <div class="card-header" id="day1">Date</div>
-                                <div class="card-body">
-                                    <h5 class="card-text">Temp:</h5>
-                                    <h5 class="card-text">Humidity:</h5>
-                                </div>
+        </div>
+        <!-- forecast information div-->
+        <div class="forecast">
+            <h1>5 day forecast</h1>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col">
+                        <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+                            <div class="card-header" id="day1">Tomorrow</div>
+                            <div class="card-body">
+                                <h6 class="card-text">Temp: <span id="temp1">
+                                    </span></h6>
+                                <h6 class="card-text">Humidity: <span id="hum1">
+                                    </span></h6>
                             </div>
                         </div>
-                        <div class="col">
-                            <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
-                                <div class="card-header" id="day2">Date</div>
-                                <div class="card-body">
-                                    <h5 class="card-text">Temp:</h5>
-                                    <h5 class="card-text">Humidity:</h5>
-                                </div>
+                    </div>
+                    <div class="col">
+                        <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+                            <div class="card-header" id="day2">2 days time</div>
+                            <div class="card-body">
+                                <h6 class="card-text">Temp: <span id="temp2">
+                                    </span></h6>
+                                <h6 class="card-text">Humidity: <span id="hum2">
+                                    </span></h6>
                             </div>
                         </div>
-                        <div class="col">
-                            <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
-                                <div class="card-header" id="day3">Date</div>
-                                <div class="card-body">
-                                    <h5 class="card-text">Temp:</h5>
-                                    <h5 class="card-text">Humidity:</h5>
-                                </div>
+                    </div>
+                    <div class="col">
+                        <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+                            <div class="card-header" id="day3">3 days time</div>
+                            <div class="card-body">
+                                <h6 class="card-text">Temp: <span id="temp3">
+                                    </span></h6>
+                                <h6 class="card-text">Humidity: <span id="hum3">
+                                    </span></h6>
                             </div>
                         </div>
-                        <div class="col">
-                            <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
-                                <div class="card-header" id="day4">Date</div>
-                                <div class="card-body">
-                                    <h5 class="card-text">Temp:</h5>
-                                    <h5 class="card-text">Humidity:</h5>
-                                </div>
+                    </div>
+                    <div class="col">
+                        <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+                            <div class="card-header" id="day4">4 days time</div>
+                            <div class="card-body">
+                                <h6 class="card-text">Temp: <span id="temp4">
+                                    </span></h6>
+                                <h6 class="card-text">Humidity: <span id="hum4">
+                                    </span></h6>
                             </div>
                         </div>
-                        <div class="col">
-                            <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
-                                <div class="card-header" id="day5">Date</div>
-                                <div class="card-body">
-                                    <h5 class="card-text">Temp:</h5>
-                                    <h5 class="card-text">Humidity:</h5>
-                                </div>
+                    </div>
+                    <div class="col">
+                        <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+                            <div class="card-header" id="day5">5 days time</div>
+                            <div class="card-body">
+                                <h6 class="card-text">Temp: <span id="temp5">
+                                    </span></h6>
+                                <h6 class="card-text">Humidity: <span id="hum5">
+                                    </span></h6>
+
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- jQuery JS -->
-            <script src="https://code.jquery.com/jquery.js"></script>
-            <script
-                src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
-            <!-- Code to the JavaScript File -->
-            <script src="script.js"></script>
+        </div>
+    </div>
+    <!-- jQuery JS -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script src="lib/moment/moment.min.js"></script>
 </body>
 
 </html>
