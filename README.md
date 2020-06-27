@@ -7,9 +7,11 @@ I spent a long time researching and understanding the different API's available 
 
 I constructed the an AJAX call to gather initial data and used this data to help construct the second AJAX call. A combination of the two AJAX calls helped me to get the data I required for the application. I utlised the learning assistants to assist with some questions regarding using multiple API's and AJAX calls.
 
-I created an onclick event to search for a city. ONce a city is searched, a record of this search is shown on the left hand side of the page.
+I created an onclick event to search for a city. Once a city is searched, a record of this search is shown on the left hand side of the page.
 
 I utilised moment.js to show  the current date and the following 5 days dates.
+
+The dashboard is able to gather weather information but I ran out of time to add the weather icons.
 
 A screen shot is located below:
 Assets\Captureweatherdashboard.PNG

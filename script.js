@@ -12,10 +12,11 @@ $("document").ready(function () {
     //This function handles what happens when button is clicked. Row add to left hand side table and weather data displayed//
     $("#submitBtn").on("click", function (event) {
         event.preventDefault();
+        $("#searchCity").text(localStorage.getItem('city'));
         searchCity = $("#searchCity").val().trim();
         //storage of last search
         localStorage.setItem('city', searchCity);
-        document.querySelector("#searchCity").textContent = localStorage.getItem('city');
+        //document.querySelector("#searchCity").textContent = localStorage.getItem('city');
         //URL for 1st AJAX call
         var queryUrl1 = "http://api.openweathermap.org/data/2.5/forecast?q=" + searchCity + "&units=metric&appid=dc93a678def19d88644d218aac7ed21c"
         console.log(queryUrl1)
@@ -50,7 +51,7 @@ $("document").ready(function () {
                 url: queryUrl2,
                 method: "GET"
             }).then(function (response2) {
-                var icon = (" src= openweathermap.org/img/wn/" + response2.current.weather[0].icon + "@2x.png>")
+                var icon = ( src= "http://openweathermap.org/img/w/" + response2.current.weather[0].icon + ".png>")
                 console.log(response2.current.weather[0].icon)
                 console.log(icon);
                 $("#iconCurrent").html(icon);
@@ -66,7 +67,7 @@ $("document").ready(function () {
 
                 // uv index colours
                 if (uv <= 3) {
-                    $("#uv").addClass("uv-green");
+                    $("#uv").addClass("green");
                 }
                 else if (uv <= 7) {
                     $("#uv").addClass("gold");

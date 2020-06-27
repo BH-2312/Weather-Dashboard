@@ -1,35 +1,35 @@
 .citySearch{
     float: left;
-};
+}
 
-.uv-green {
-color: green !important;
-};
+.green {
+background-color: lightgreen;
+}
 
 .gold{
     background-color: gold;
-};
+}
 
 .red{
 background-color: red;
-};
+}
 
 .title{
    background-color: lightblue;
    text-align: center;
-};
+}
 
 h1{
     text-align: center; 
-};
+}
 
 .card-body{
     font-size: larger;
-};
+}
 
 #today{
     font-size: small;
-};
+}
 
     /* instructions for when screen size <768px
     @media screen and (max-width: 768px) {
